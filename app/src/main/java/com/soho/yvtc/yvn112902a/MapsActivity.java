@@ -48,7 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in TY"));
         mMap.addMarker(new MarkerOptions().position(m1).title("M1"));
         mMap.addMarker(new MarkerOptions().position(m2).title("M2"));
-        CameraPosition cameraPos = new CameraPosition.Builder().target(sydney).zoom(15.0f).build();
+        CameraPosition cameraPos = new CameraPosition.Builder().target(sydney).zoom(15.0f).tilt(65).build();
         CameraUpdate cameraUpt = CameraUpdateFactory.newCameraPosition(cameraPos);  // 地圖相機鏡頭動畫行程設定
         mMap.moveCamera(CameraUpdateFactory.newLatLng(tp));
         mMap.animateCamera(cameraUpt, 5000, null);
